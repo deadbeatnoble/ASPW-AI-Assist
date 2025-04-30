@@ -9,6 +9,8 @@ load_dotenv()
 GOOGLE_API_KEY = os.getenv("API_KEY")
 FAL_API_KEY = os.getenv("FAL_API_KEY")
 
+genai.configure(api_key=GOOGLE_API_KEY)
+
 app = FastAPI()
 
 FAL_FLUX_URL = "https://queue.fal.run/fal-ai/flux/dev"
